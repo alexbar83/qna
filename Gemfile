@@ -47,7 +47,7 @@ group :development do
 end
 
 group :test do
-   gem 'shoulda-matchers', '~> 3.1'
+  gem 'shoulda-matchers'
   gem 'rails-controller-testing'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
