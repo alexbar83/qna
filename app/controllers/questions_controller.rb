@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
 
   def show
     @answer = Answer.new
+    @answer.links.new
   end
 
   def edit
@@ -15,6 +16,8 @@ class QuestionsController < ApplicationController
 
   def new
     @question = current_user.questions.new
+    @question.links.new
+    @question.badge ||= Badge.new
   end
 
   def create
@@ -51,6 +54,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:title, :body, files: []))
+    params.require(:question).permit(:title, :body,
+                                    files: [], links_attributes: [:name, :url],badge_attributes: [:title, :image] )
   end
 end 
