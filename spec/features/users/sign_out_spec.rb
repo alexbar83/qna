@@ -11,4 +11,4 @@ feature 'User can sign out' do
     expect(page).to have_content 'Signed out successfully.'
     expect(current_path).to eq root_path
   end
-end end
+end 
