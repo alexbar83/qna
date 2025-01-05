@@ -5,7 +5,7 @@ FactoryBot.define do
   
   factory :answer do
     body { "MyString" }
-    question { nil }
+    question 
   end
 
   trait :invalid_answer do
